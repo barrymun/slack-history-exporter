@@ -37,6 +37,8 @@ Run the script:
 yarn run exe
 ```
 
+The file `history.txt` will be created. If it already exists the contents will be overwritten.
+
 ## Why does this exist?
 
 Useful for people who may want to save messages from a Slack workspace that they are leaving, or a Slack workspace where the license is expiring.

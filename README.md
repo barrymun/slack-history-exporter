@@ -23,6 +23,20 @@ Retrieve messages from DM (direct message) channels in Slack and append the outp
 > SLACK_CHANNEL_ID=''
 > ```
 
+## Usage
+
+Install dependencies:
+
+```bash
+yarn install
+```
+
+Run the script:
+
+```bash
+yarn run exe
+```
+
 ## Why does this exist?
 
 Useful for people who may want to save messages from a Slack workspace that they are leaving, or a Slack workspace where the license is expiring.

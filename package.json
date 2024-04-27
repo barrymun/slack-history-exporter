@@ -1,0 +1,17 @@
+{
+  "name": "slack-history-exporter",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "exe": "tsx index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.15",
+    "tsx": "^4.7.3",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@slack/web-api": "^7.0.4",
+    "dotenv": "^16.4.5"
+  }
+}

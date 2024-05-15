@@ -51,7 +51,11 @@ function appendToFile(content: string) {
 
   for await (const page of web.paginate('conversations.history', args)) {
     const response = page as unknown as ReturnType<typeof web.conversations.history>;
-    const content = ((await response).messages ?? []).map((m) => m.text ?? '').join(messageDelimiter);
+    const content = ((await response).messages ?? []).map((m) => {
+      const date = new Date(parseFloat(m.ts ?? "0.0") * 1000);
+      const readableDate = date.toISOString();
+      return `${readableDate}\n${m.text}`;
+    }).join(messageDelimiter);
     appendToFile(content);
     await new Promise((resolve) => setTimeout(resolve, 2000)); // basic rate limit prevention
   }
